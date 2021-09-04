@@ -1,0 +1,11 @@
+# Start and stop codon table 
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no

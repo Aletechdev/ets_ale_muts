@@ -1,0 +1,25 @@
+# mutfunc version 1.0 downloaded on 10/12/2020 00:44
+# Phosphosite table
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no
+#  10 site: modified residue followed by position
+#  11 sequence: sequence of modified site and flanking residues
+#  12 experimental_kinases: kinases experimentally identified to target this phosphosite
+#  13 site_function: function of this phosphorylation site, if any
+#  14 site_evidence: evidence of this phosphorylation site, as comma-separated pubmed ids
+#  15 kinase_evidence: evidence of kinase phosphorylation on this site, if any
+#  16 function_evidence: evidence of site function, if any
+#  17 predicted_kinase: kinase predicted to lose phosphorylation at this site
+#  18 wt_score: binding score of kinase to wildtype sequence
+#  18 mt_score: binding score of kinase to mutated sequence, if the mutation affects the central residue the sequence is not scored though a score of zero can be assumed
+#  19 probability_loss: probability of kinase losing phosphorylation at this site
+#  20 log_ratio: log ratio between wildtype and mutant scores
+chr	pos	ref	alt	gene	posaa	refaa	altaa	impact	site	sequence	experimental_kinases	site_function	site_evidence	kinase_evidence	function_evidence	predicted_kinase	wt_score	mt_score	probability_loss	log_ratio

@@ -1,0 +1,36 @@
+Reference Seq,Position,Mutation Type,Sequence Change,Gene,Function,Product,GO Process,GO Component,Mut ID,Details,ndh-cyoB A0 F0 I1 R1,ndh-cyoB A5 F24 I0 R1,ndh-cyoB A5 F44 I0 R1,ndh-cyoB A5 F59 I0 R1,ndh-cyoB A5 F59 I1 R1,ndh-cyoB A6 F24 I0 R1,ndh-cyoB A6 F44 I0 R1,ndh-cyoB A6 F58 I0 R1,ndh-cyoB A6 F58 I1 R1,ndh-cyoB A7 F24 I0 R1,ndh-cyoB A7 F42 I0 R1,ndh-cyoB A7 F56 I0 R1,ndh-cyoB A7 F56 I1 R1,ndh-cyoB A8 F23 I0 R1,ndh-cyoB A8 F44 I0 R1,ndh-cyoB A8 F59 I0 R1,ndh-cyoB A8 F59 I1 R1
+NC_000913,"3,966,862",SNP,G→A,rho,,transcription termination factor,,,1657631,R149H (CGT→CAT),,,,,,,,0.24,,,,,,,,,
+NC_000913,"759,250",SNP,G→T,sucA,,"2-oxoglutarate decarboxylase, thiamine triphosphate-binding",,,711684,R182L (CGC→CTC),,,,,,,,,,,,,,0.83,0.84,0.93,
+NC_000913,"1,299,499",DEL,"Δ1,199 bp","ychE, oppA",,UPF0056 family inner membrane protein/oligopeptide ABC transporter periplasmic binding protein,,,612037,intergenic (+254/‑485),,,,1.00,,,,,,,,,1.00,,,,
+NC_000913,"257,908",DEL,Δ776 bp,[crl],,[crl],,,481286,,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,,1.00,1.00,1.00,1.00
+NC_000913,"1,708,751",SNP,A→G,rsxC,,SoxR iron-sulfur cluster reduction factor component; putative membrane-associated NADH oxidoreductase of electron transport complex,,,832327,E611E (GAA→GAG),,,,,,,,,,,,,,,,0.20,
+NC_000913,"756,099",SNP,T→C,sdhA,,"succinate dehydrogenase, flavoprotein subunit",,,1657567,W65R (TGG→CGG),,0.35,0.69,0.80,1.00,,,,,,,,,,,,
+NC_000913,"3,967,302",SNP,C→T,rho,,transcription termination factor,,,1657610,R296C (CGT→TGT),,,0.30,,1.00,,,,,,,,,,,,
+NC_000913,"2,405,227",DEL,Δ1 bp,"nuoA, lrhA",,"NADH:ubiquinone oxidoreductase, membrane subunit A/transcriptional repressor of flagellar, motility and chemotaxis genes",,,1657676,intergenic (‑155/+476),,,,,,,,,,,,,,,,1.00,
+NC_000913,"3,316,890",SNP,C→G,nusA,,transcription termination/antitermination L factor,,,1657677,V213L (GTG→CTG),,,,,,,,,,,,,,,0.23,,
+NC_000913,"2,560,996",SNP,G→T,"yffL, yffM",,CPZ-55 prophage; uncharacterized protein/CPZ-55 prophage; uncharacterized protein,,,1111823,intergenic (+98/‑372),,,,,,,,,,,,,,,,0.22,
+NC_000913,"756,968",SNP,C→G,sdhA,,"succinate dehydrogenase, flavoprotein subunit",,,1657616,H354Q (CAC→CAG),,,,,,,,,,,,,,,,,1.00
+NC_000913,"757,837",DEL,Δ3 bp,sdhB,,"succinate dehydrogenase, FeS subunit",,,1657681,coding (149‑151/717 nt),,,,,,0.24,,,,,,,,,,,
+NC_000913,"3,967,404",SNP,G→T,rho,,transcription termination factor,,,1657646,V330F (GTT→TTT),,,,,,,,,,,,,1.00,,,,
+NC_000913,"1,392,996",DEL,"Δ3,048 bp","mppA,ynaI",,"mppA,ynaI",,,1657647,IS5‑mediated,,,,,,,,,1.00,,,,,,,,
+NC_000913,"2,173,361",DEL,Δ2 bp,gatC,,"pseudogene, galactitol-specific enzyme IIC component of PTS;transport; Transport of small molecules: Carbohydrates, organic acids, alcohols; PTS system galactitol-specific enzyme IIC",,,1103452,pseudogene (1‑2/442 nt),,1.00,1.00,1.00,,1.00,1.00,1.00,,1.00,1.00,1.00,,1.00,1.00,1.00,
+NC_000913,"756,150",SNP,C→T,sdhA,,"succinate dehydrogenase, flavoprotein subunit",,,1657630,Q82* (CAG→TAG),,,,,,0.46,1.00,1.00,1.00,,,,,,,,
+NC_000913,"4,296,060",SNP,C→T,"gltP, yjcO",,glutamate/aspartate:proton symporter/Sel1 family TPR-like repeat protein,,,1103621,intergenic (+266/+376),,0.32,0.34,0.38,,0.33,0.29,0.35,,0.35,0.33,0.32,,0.34,0.24,0.45,
+NC_000913,"758,306",SNP,T→G,sdhB,,"succinate dehydrogenase, FeS subunit",,,1657568,C206W (TGT→TGG),,0.51,,,,,,,,,,,,,,,
+NC_000913,"2,477,549",SNP,G→A,dsdC,,dsd operon activator; autorepressor,,,1657648,A27A (GCC→GCT),,,,,,,,,1.00,,,,,,,,
+NC_000913,"3,967,449",SNP,C→T,rho,,transcription termination factor,,,1657634,L345F (CTC→TTC),,,,,,,0.44,,1.00,,,,,,,,
+NC_000913,"4,296,380",INS,+CG,"gltP, yjcO",,glutamate/aspartate:proton symporter/Sel1 family TPR-like repeat protein,,,1103622,intergenic (+586/+56),,1.00,1.00,1.00,,1.00,1.00,1.00,,1.00,1.00,1.00,,1.00,1.00,1.00,
+NC_000913,"756,886",SNP,T→G,sdhA,,"succinate dehydrogenase, flavoprotein subunit",,,1657640,L327R (CTG→CGG),,,,,,,,,,0.90,0.87,0.87,1.00,,,,
+NC_000913,"1,978,503",DEL,Δ776 bp,"insB1,insA",,"insB1,insA",,,1102505,,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"3,815,859",DEL,Δ82 bp,"[rph],[rph]",,"[rph],[rph]",,,1102506,,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"4,296,381",INS,+GC,"gltP, yjcO",,glutamate/aspartate:proton symporter/Sel1 family TPR-like repeat protein,,,644028,intergenic (+587/+55),1.00,,,,1.00,,,,1.00,,,,1.00,,,,1.00
+NC_000913,"3,458,110",SNP,C→A,gspD,,"general secretory pathway component, cryptic",,,1580141,T578T (ACC→ACA),1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"3,482,325",SNP,G→A,yheS,,ABC-F family protein predicted regulatory ATPase,,,1580142,R346H (CGC→CAC),1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"3,560,455",INS,+G,"glpR, glpR",,"pseudogene, DNA-binding transcriptional repressor;regulator; Energy metabolism, carbon: Anaerobic respiration; repressor of the glp operon/pseudogene, DNA-binding transcriptional repressor;regulator; Energy metabolism, carbon: Anaerobic respiration; repressor of the glp operon",,,564207,intergenic (‑2/+1),1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"4,473,927",SNP,C→A,bdcA,,c-di-GMP-binding biofilm dispersal mediator protein,,,1580144,A43S (GCC→TCC),1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
+NC_000913,"1,552,191",SNP,C→A,"fdnI, yddM",,"formate dehydrogenase-N, cytochrome B556 (gamma) subunit, nitrate-inducible/putative DNA-binding transcriptional regulator",,,692713,intergenic (+200/+207),,,,,,,,0.22,,,,0.26,,,,,
+NC_000913,"4,189,448",SNP,C→T,rpoC,,"RNA polymerase, beta prime subunit",,,643743,Q1367* (CAG→TAG),,,,,,,,,,,0.21,0.23,,,,,
+NC_000913,"2,173,363",DEL,Δ2 bp,"gatC, gatC",,"pseudogene, galactitol-specific enzyme IIC component of PTS;transport; Transport of small molecules: Carbohydrates, organic acids, alcohols; PTS system galactitol-specific enzyme IIC/pseudogene, galactitol-specific enzyme IIC component of PTS;transport; Transport of small molecules: Carbohydrates, organic acids, alcohols; PTS system galactitol-specific enzyme IIC",,,566843,intergenic (‑1/+1),1.00,,,,1.00,,,,1.00,,,,1.00,,,,1.00
+NC_000913,"164,581",SNP,A→C,"hrpB, mrcB",,putative ATP-dependent helicase/fused glycosyl transferase and transpeptidase,,,1582332,intergenic (+47/‑149),,0.26,,,,,0.21,,,,,,,,,,
+NC_000913,"4,184,497",SNP,A→C,rpoB,,"RNA polymerase, beta subunit",,,1657679,M1085L (ATG→CTG),,,,,,,,,,,,,,,,0.24,
+NC_000913,"1,979,486",MOB,IS5 (+) +4 bp,"insA, uspC",,IS1 repressor TnpA/universal stress protein,,,673244,intergenic (‑271/‑264),1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00

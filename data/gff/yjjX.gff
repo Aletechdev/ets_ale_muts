@@ -1,0 +1,24 @@
+##gff-version 3
+##sequence-region P39411 1 170
+P39411	UniProtKB	Chain	1	170	.	.	.	ID=PRO_0000156337;Note=Inosine/xanthosine triphosphatase	
+P39411	UniProtKB	Region	8	13	.	.	.	Note=Substrate binding;Ontology_term=ECO:0000255;evidence=ECO:0000255|HAMAP-Rule:MF_00648	
+P39411	UniProtKB	Region	68	69	.	.	.	Note=Substrate binding;Ontology_term=ECO:0000255;evidence=ECO:0000255|HAMAP-Rule:MF_00648	
+P39411	UniProtKB	Metal binding	38	38	.	.	.	Note=Manganese or magnesium;Ontology_term=ECO:0000255;evidence=ECO:0000255|HAMAP-Rule:MF_00648	
+P39411	UniProtKB	Metal binding	68	68	.	.	.	Note=Manganese or magnesium;Ontology_term=ECO:0000255;evidence=ECO:0000255|HAMAP-Rule:MF_00648	
+P39411	UniProtKB	Sequence conflict	146	152	.	.	.	Note=GKLTRAS->ETHSRH;Ontology_term=ECO:0000305;evidence=ECO:0000305	
+P39411	UniProtKB	Beta strand	2	7	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	11	25	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Beta strand	30	34	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	48	65	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Beta strand	69	79	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Beta strand	81	94	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Beta strand	96	100	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	108	114	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Turn	115	117	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	120	125	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	133	135	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	138	143	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Turn	144	146	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	150	161	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	163	166	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	
+P39411	UniProtKB	Helix	168	170	.	.	.	Ontology_term=ECO:0007744;evidence=ECO:0007744|PDB:1U5W	

@@ -1,0 +1,17 @@
+# mutfunc version 1.0 downloaded on 10/12/2020 00:44
+# Post-translational modifications table
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no
+#  10 site: modified residue followed by position
+#  11 sequence: sequence of site and flanking residues
+#  12 modification_type: type of post-translational modifications
+#  13 site_evidence: evidence of the site, as comma-separated pubmed identifiers
+chr	pos	ref	alt	gene	posaa	refaa	altaa	impact	site	sequence	modification_type	site_evidence

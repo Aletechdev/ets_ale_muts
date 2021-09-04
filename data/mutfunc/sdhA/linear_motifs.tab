@@ -1,0 +1,22 @@
+# mutfunc version 1.0 downloaded on 10/12/2020 00:44
+# Linear motif table
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no
+#  10 start: start position for the linear motif 
+#  11 end: end position for the linear motif
+#  12 relative_position: position of mutation relative to the linear motif
+#  13 sequence: sequence of the linear motif
+#  14 accession: ELM accession for the linear motif
+#  15 class: functional site class for the linear motif
+#  16 description: detailed description of the linear motif
+#  17 pattern: regular expression pattern for the linear motif
+#  18 pattern_probability: likelihood of the pattern
+chr	pos	ref	alt	gene	posaa	refaa	altaa	impact	start	end	relative_position	sequence	accession	class	description	pattern	pattern_probability

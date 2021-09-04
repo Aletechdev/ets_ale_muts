@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+<script src="https://cdn.rawgit.com/arose/ngl/v2.0.0-dev.32/dist/ngl.js"></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var stage = new NGL.Stage("viewport");
+
+        stage.loadFile("https://raw.githubusercontent.com/SBRG/iML1515_GP/master/iML1515_GP/genes/b4394/b4394_protein/structures/1u5w-A_clean.pdb").then(
+            function (o) {
+                $.getJSON("YjjX_feats.json", function (json) {
+                    console.log(json)
+                    crtn_feat_clrs = []
+                    for (let i = 1; i < Object.keys(json["feature"]).length; i++) {
+                        crtn_feat_clrs.push([json["color"][i], json.start[i] + '-' + json.end[i]])
+                    }
+                    let schemeId = NGL.ColormakerRegistry.addSelectionScheme(crtn_feat_clrs)
+                    o.addRepresentation("cartoon", {color: schemeId})
+                    console.log(crtn_feat_clrs)
+                    // o.addRepresentation("cartoon", {color: "white"})
+
+                    for (let i = 0; i < Object.keys(json["feature"]).length; i++) {
+                        if ((json["color"][i] !== "white")  // don't want surface for base Chain
+                            // && (json["color"][i] !== "#E4BCFF")
+                            // && (json["color"][i] !== "#A5FFC1")
+                            // && (json["color"][i] !== "#FFD8AE")
+                            )
+                        {
+                            o.addRepresentation("surface", {
+                                visible: true,
+                                color: json["color"][i],
+                                opacity: 0.5,
+                                opaqueBack: false,
+                                sele: json.start[i] + '-' + json.end[i],
+                            })
+                        }
+                    }
+                    // for (let i = 0; i < Object.keys(json["feature"]).length; i++) {
+                    //     if (
+                    //       // (json["feature"][i] === "Substrate binding site")
+                          // (json["feature"][i] === "SdhB interface")
+                          // || (json["feature"][i] === "Substrate binding site")
+                    //     )
+                    //     {
+                    //       // For whatever reason, NGL will only draw a cartoon if the length is over 4
+                    //       start_res = json.start[i] - 2
+                    //       end_res = json.end[i] + 1
+                    //       selection_str = start_res + '-' + end_res
+                    //       o.addRepresentation("cartoon", {
+                    //         color: json["color"][i],
+                    //         sele: selection_str,
+                    //       })
+                    //     }
+                    //   }
+                    // for (let i = 0; i < Object.keys(json["feature"]).length; i++) {
+                    //     if (
+                    //       (json["feature"][i] === "SdhB interface")
+                    //       || (json["feature"][i] === "Substrate binding site")
+                    //       )
+                    //     {
+                    //         o.addRepresentation("surface", {
+                    //             visible: true,
+                    //             color: json["color"][i],
+                    //             opacity: 0.3,
+                    //             opaqueBack: false,
+                    //             sele: json.start[i] + '-' + json.end[i],
+                    //         })
+                    //     }
+                    // }
+                })
+                $.getJSON("YjjX_aa_muts.json", function (json) {
+                    console.log(json)
+                    for (let i = 0; i < Object.keys(json["name"]).length; i++) {
+                        if (json["color"][i] != "red")
+                        {
+                            selection = json["residue pos"][i] + '.CA'
+                            o.addRepresentation("spacefill", {
+                                opacity: 1,
+                                radius: 1,
+                                color: json["color"][i],
+                                sele: selection,
+                            })
+                            o.addRepresentation("spacefill", {
+                                opacity: 0.5,
+                                opaqueBack: false,
+                                radius: json["mutation count"][i],
+                                color: json["color"][i],
+                                sele: selection,
+                            })
+
+                            // The below is for a custom text label per sphere.
+                            // Can't simply use the AA position since off by one according to breseq mutation positions.
+                            // The positions used to place the mutations are appropriate for the structures.
+                            // The positions used to label the mutations are those of breseq mutations.
+                            // var selectionObject = new NGL.Selection(selection);
+                            // var labelText = {};
+                            // var structure = o.structure;
+                            // structure.eachAtom(function (atomProxy) {
+                            //     labelText[atomProxy.index] = (json["residue pos"][i]).toString();
+                            // }, selectionObject);
+                            //
+                            // o.addRepresentation("label", {
+                            //     sele: selection,
+                            //     color: "black",
+                            //     radius: 5,
+                            //     // showBackground: true,
+                            //     // backgroundColor: "white",
+                            //     // labelType: "format",
+                            //     // labelFormat: "%(resname)s %(resno)s",
+                            //     labelType: 'text',
+                            //     labelText: labelText,
+                            // })
+                        }
+                    }
+                })
+                o.autoView()
+                // stage.setSpin(true);
+                stage.setParameters({backgroundColor: "white"});
+            });
+    });
+</script>
+<div id="viewport" style="width:100%; height:100%;"></div>
+</body>
+</html>

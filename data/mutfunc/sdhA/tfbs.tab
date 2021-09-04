@@ -1,0 +1,29 @@
+# mutfunc version 1.0 downloaded on 10/12/2020 00:44
+# Transcription factor binding sites table
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no
+#  10 ref_strand: reference base on the scored strand, this will differ from ref when on negative strand
+#  11 alt_strand: mutated base on the scored strand, this will differ from alt when on the negative strand
+#  12 start: start position of the binding site
+#  13 end: end position of the binding site
+#  14 sequence: sequence of the binding site
+#  14 tf: transcription factor predicted to bind this binding site
+#  15 knockout_pvalue: p-value of over or under-expression for the downstream gene when the transcription factor is knocked out
+#  16 chip_evidence: evidence of this binding site being located in a chip-chip region for this transcription factor as a pubmed id
+#  17 gene_strand: strand containing the downstream gene
+#  18 scored_strand: strand containing binding site
+#  19 wt_score: binding score of the transcription factor to the wildtype site
+#  20 mt_score: binding score of the transcription factor to the mutated site
+#  21 score_difference: score difference between wildtype and mutant
+#  22 ic_difference: information content difference between the wildtype and mutant bases
+#  23 percentile_difference: score percentile difference between score wildtype and mutant
+#  24 cells: cell lines or tissues with evidence of chip-seq (human only)
+chr	pos	ref	alt	gene	posaa	refaa	altaa	impact	ref_strand	alt_strand	start	end	sequence	tf	knockout_pvalue	chip_evidence	gene_strand	scored_strand	wt_score	mt_score	score_difference	ic_difference	percentile_difference	cells

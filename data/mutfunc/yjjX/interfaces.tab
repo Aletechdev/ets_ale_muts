@@ -1,0 +1,21 @@
+# mutfunc version 1.0 downloaded on 10/12/2020 00:44
+# Protein-protein interaction interface table
+# Column descriptions: 
+#  1  chr: chromosome
+#  2  pos: genomic position
+#  3  ref: genomic reference base
+#  4  alt: genomic mutation base
+#  5  gene: gene identifier
+#  6  posaa: protein position
+#  7  refaa: reference amino acid
+#  8  altaa: mutated amino acid
+#  9  impact: is the mutation predicted to impact function? '1' if yes, '0' if no
+#  10 pdb_id: pdb identifier for the structure containing the interaction between proteins
+#  11 sa_difference: percentage difference in predicted surface accessibility (computed by Naccess) between interacting and separated chains
+#  12 protein_a: identifier of the source protein containing the mutation
+#  13 protein_b: identifier of interacting partner protein
+#  14 chain: mutated chain in the pdb file
+#  15 ddg: predicted change in free energy of unfolding, where a value above 0 indicates a destabilising mutation
+#  16 evidence: 'exp' for experimental model, 'hom' for homology models and 'ddm' for domain-domain homology models
+#  17 pdb_position: corresponding position of the variant in the pdb file
+chr	pos	ref	alt	gene	posaa	refaa	altaa	impact	pdb_id	sa_difference	protein_a	protein_b	chain	ddg	evidence	pdb_position
