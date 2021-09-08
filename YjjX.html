@@ -20,7 +20,7 @@
 
         var stage = new NGL.Stage("viewport");
 
-        stage.loadFile("https://raw.githubusercontent.com/SBRG/iML1515_GP/master/iML1515_GP/genes/b4394/b4394_protein/structures/1u5w-A_clean.pdb").then(
+        stage.loadFile("https://raw.githubusercontent.com/SBRG/iML1515_GP/master/iML1515_GP/genes/b4394/b4394_protein/structures/1u5w-A_clean.pdb").then(  // !!! 1u5w includes MET as the first residue
             function (o) {
                 $.getJSON("YjjX_feats.json", function (json) {
                     console.log(json)
@@ -29,9 +29,9 @@
                         crtn_feat_clrs.push([json["color"][i], json.start[i] + '-' + json.end[i]])
                     }
                     let schemeId = NGL.ColormakerRegistry.addSelectionScheme(crtn_feat_clrs)
-                    o.addRepresentation("cartoon", {color: schemeId})
-                    console.log(crtn_feat_clrs)
-                    // o.addRepresentation("cartoon", {color: "white"})
+                    // o.addRepresentation("cartoon", {color: schemeId})
+                    // console.log(crtn_feat_clrs)
+                    o.addRepresentation("cartoon", {color: "white"})
 
                     for (let i = 0; i < Object.keys(json["feature"]).length; i++) {
                         if ((json["color"][i] !== "white")  // don't want surface for base Chain
@@ -40,12 +40,16 @@
                             // && (json["color"][i] !== "#FFD8AE")
                             )
                         {
+                          // !!! 1u5w includes MET as the first residue
+                            start_res = json.start[i] + 1
+                            end_res = json.end[i] + 1
+
                             o.addRepresentation("surface", {
                                 visible: true,
                                 color: json["color"][i],
                                 opacity: 0.5,
                                 opaqueBack: false,
-                                sele: json.start[i] + '-' + json.end[i],
+                                sele: start_res + '-' + end_res,
                             })
                         }
                     }
@@ -87,7 +91,8 @@
                     for (let i = 0; i < Object.keys(json["name"]).length; i++) {
                         if (json["color"][i] != "red")
                         {
-                            selection = json["residue pos"][i] + '.CA'
+                            mut_res = json["residue pos"][i] + 1  // !!! 1u5w includes MET as the first residue
+                            selection = mut_res + '.CA'
                             o.addRepresentation("spacefill", {
                                 opacity: 1,
                                 radius: 1,
@@ -110,7 +115,8 @@
                             // var labelText = {};
                             // var structure = o.structure;
                             // structure.eachAtom(function (atomProxy) {
-                            //     labelText[atomProxy.index] = (json["residue pos"][i]).toString();
+                            //   labelText[atomProxy.index] = (mut_res).toString();  // !!! 1u5w includes MET as the first residue
+                            //     // labelText[atomProxy.index] = (json["residue pos"][i]).toString();
                             // }, selectionObject);
                             //
                             // o.addRepresentation("label", {

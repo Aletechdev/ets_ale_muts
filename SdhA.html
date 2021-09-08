@@ -20,7 +20,7 @@
 
         var stage = new NGL.Stage("viewport");
 
-        stage.loadFile("https://raw.githubusercontent.com/SBRG/iML1515_GP/master/iML1515_GP/genes/b0723/b0723_protein/structures/2wdq-A_clean.pdb").then(
+        stage.loadFile("https://raw.githubusercontent.com/SBRG/iML1515_GP/master/iML1515_GP/genes/b0723/b0723_protein/structures/2wdq-A_clean.pdb").then(  // !!! 2wdq includes MET as the first residue
             function (o) {
                 $.getJSON("SdhA_feats.json", function (json) {
                     console.log(json)
@@ -71,12 +71,16 @@
                           || (json["feature"][i] === "Substrate binding site")
                           )
                         {
+                          // !!! 2wdq includes MET as the first residue
+                          start_res = json.start[i] + 1
+                          end_res = json.end[i] + 1
+
                             o.addRepresentation("surface", {
                                 visible: true,
                                 color: json["color"][i],
                                 opacity: 0.3,
                                 opaqueBack: false,
-                                sele: json.start[i] + '-' + json.end[i],
+                                sele: start_res + '-' + end_res,
                             })
                         }
                     }
@@ -86,7 +90,9 @@
                     for (let i = 0; i < Object.keys(json["name"]).length; i++) {
                         if (json["color"][i] != "red")
                         {
-                            selection = json["residue pos"][i] + '.CA'
+                            mut_res = json["residue pos"][i] + 1  // !!! 2wdq includes MET as the first residue
+                            selection = mut_res + '.CA'
+                            // selection = json["residue pos"][i] + '.CA'
                             o.addRepresentation("spacefill", {
                                 opacity: 1,
                                 radius: 1,
@@ -105,24 +111,25 @@
                             // Can't simply use the AA position since off by one according to breseq mutation positions.
                             // The positions used to place the mutations are appropriate for the structures.
                             // The positions used to label the mutations are those of breseq mutations.
-                            var selectionObject = new NGL.Selection(selection);
-                            var labelText = {};
-                            var structure = o.structure;
-                            structure.eachAtom(function (atomProxy) {
-                                labelText[atomProxy.index] = (json["residue pos"][i]).toString();
-                            }, selectionObject);
-
-                            o.addRepresentation("label", {
-                                sele: selection,
-                                color: "black",
-                                radius: 5,
-                                // showBackground: true,
-                                // backgroundColor: "white",
-                                // labelType: "format",
-                                // labelFormat: "%(resname)s %(resno)s",
-                                labelType: 'text',
-                                labelText: labelText,
-                            })
+                            // var selectionObject = new NGL.Selection(selection);
+                            // var labelText = {};
+                            // var structure = o.structure;
+                            // structure.eachAtom(function (atomProxy) {
+                            //   labelText[atomProxy.index] = (mut_res).toString();  // !!! 2wdq includes MET as the first residue
+                            //     // labelText[atomProxy.index] = (json["residue pos"][i]).toString();
+                            // }, selectionObject);
+                            //
+                            // o.addRepresentation("label", {
+                            //     sele: selection,
+                            //     color: "black",
+                            //     radius: 5,
+                            //     // showBackground: true,
+                            //     // backgroundColor: "white",
+                            //     // labelType: "format",
+                            //     // labelFormat: "%(resname)s %(resno)s",
+                            //     labelType: 'text',
+                            //     labelText: labelText,
+                            // })
                         }
                     }
                 })
